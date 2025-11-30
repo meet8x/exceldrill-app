@@ -16,3 +16,4 @@ razorpay
 sqlalchemy
 bcrypt
 pydantic-settings
+plotly
