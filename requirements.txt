@@ -17,3 +17,6 @@ sqlalchemy
 bcrypt
 pydantic-settings
 plotly
+email-validator
+kaleido
+requests
