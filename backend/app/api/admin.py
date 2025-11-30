@@ -97,3 +97,35 @@ def revoke_premium(
     db.commit()
     
     return {"message": f"Premium access revoked from {user.email}"}
+
+@router.post("/create-super-user")
+def create_super_user(
+    db: Session = Depends(deps.get_db)
+) -> Any:
+    # Check if admin already exists
+    user = db.query(User).filter(User.email == "admin@example.com").first()
+    if user:
+        user.is_admin = True
+        user.is_paid = True
+        user.plan_type = "lifetime"
+        # Reset password to ensure it's known
+        from backend.app.core.security import get_password_hash
+        user.hashed_password = get_password_hash("adminpassword")
+        db.commit()
+        return {"message": "Admin user updated successfully. Login with admin@example.com / adminpassword"}
+    
+    # Create new admin
+    from backend.app.core.security import get_password_hash
+    user = User(
+        email="admin@example.com",
+        hashed_password=get_password_hash("adminpassword"),
+        is_active=True,
+        is_paid=True,
+        is_verified=True,
+        is_admin=True,
+        plan_type="lifetime",
+        full_name="Admin User"
+    )
+    db.add(user)
+    db.commit()
+    return {"message": "Admin user created successfully. Login with admin@example.com / adminpassword"}
