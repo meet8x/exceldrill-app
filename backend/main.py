@@ -10,6 +10,10 @@ from backend.app.db.session import engine
 # Create tables
 Base.metadata.create_all(bind=engine)
 
+# Initialize DB (Create admin user)
+from backend.app.db.init_db import init_db
+init_db()
+
 app = FastAPI(title="Exceldrill AI")
 
 # Configure CORS
