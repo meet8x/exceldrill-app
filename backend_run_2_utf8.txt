@@ -1,0 +1,12 @@
+﻿python : ERROR:    Error loading ASGI app. Could 
+not import module "backend.app.main".
+At line:1 char:62
++ ... y\scratch"; python -m uvicorn 
+backend.app.main:app --host 0.0.0.0 --p ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERR 
+   OR:    Error...kend.app.main".:String) [], R  
+  emoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

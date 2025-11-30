@@ -1,0 +1,4 @@
+Creating new premium user admin@example.com...
+Successfully configured user: admin@example.com
+Password: adminpassword
+Plan: lifetime

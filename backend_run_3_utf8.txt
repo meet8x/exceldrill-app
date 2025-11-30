@@ -1,0 +1,105 @@
+﻿python : Traceback (most recent call last):
+At line:1 char:62
++ ... y\scratch"; python -m uvicorn 
+backend.main:app --host 0.0.0.0 --port  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Tra 
+   ceback (most recent call last)::String) [],   
+  RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Python\Python310\lib\runpy.py", line 
+196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python\Python310\lib\runpy.py", line 
+86, in _run_code
+    exec(code, run_globals)
+  File "C:\Python\Python310\lib\site-packages\uvi
+corn\__main__.py", line 4, in <module>
+    uvicorn.main()
+  File "C:\Python\Python310\lib\site-packages\cli
+ck\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "C:\Python\Python310\lib\site-packages\cli
+ck\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "C:\Python\Python310\lib\site-packages\cli
+ck\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, 
+**ctx.params)
+  File "C:\Python\Python310\lib\site-packages\cli
+ck\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "C:\Python\Python310\lib\site-packages\uvi
+corn\main.py", line 416, in main
+    run(
+  File "C:\Python\Python310\lib\site-packages\uvi
+corn\main.py", line 587, in run
+    server.run()
+  File "C:\Python\Python310\lib\site-packages\uvi
+corn\server.py", line 61, in run
+    return 
+asyncio.run(self.serve(sockets=sockets))
+  File 
+"C:\Python\Python310\lib\asyncio\runners.py", 
+line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python\Python310\lib\asyncio\base_even
+ts.py", line 641, in run_until_complete
+    return future.result()
+  File "C:\Python\Python310\lib\site-packages\uvi
+corn\server.py", line 68, in serve
+    config.load()
+  File "C:\Python\Python310\lib\site-packages\uvi
+corn\config.py", line 467, in load
+    self.loaded_app = 
+import_from_string(self.app)
+  File "C:\Python\Python310\lib\site-packages\uvi
+corn\importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File 
+"C:\Python\Python310\lib\importlib\__init__.py", 
+line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], 
+package, level)
+  File "<frozen importlib._bootstrap>", line 
+1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 
+1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 
+1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 
+688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", 
+line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 
+241, in _call_with_frames_removed
+  File "C:\Users\ASUS\.gemini\antigravity\scratch
+\backend\main.py", line 3, in <module>
+    from backend.app.api.endpoints import router 
+as api_router
+  File "C:\Users\ASUS\.gemini\antigravity\scratch
+\backend\app\api\endpoints.py", line 6, in 
+<module>
+    from backend.app.api import deps
+  File "C:\Users\ASUS\.gemini\antigravity\scratch
+\backend\app\api\deps.py", line 7, in <module>
+    from backend.app.core.config import settings
+  File "C:\Users\ASUS\.gemini\antigravity\scratch
+\backend\app\core\config.py", line 2, in <module>
+    from pydantic import BaseSettings
+  File "C:\Python\Python310\lib\site-packages\pyd
+antic\__init__.py", line 386, in __getattr__
+    return _getattr_migration(attr_name)
+  File "C:\Python\Python310\lib\site-packages\pyd
+antic\_migration.py", line 296, in wrapper
+    raise PydanticImportError(
+pydantic.errors.PydanticImportError: 
+`BaseSettings` has been moved to the 
+`pydantic-settings` package. See https://docs.pyd
+antic.dev/2.7/migration/#basesettings-has-moved-t
+o-pydantic-settings for more details.
+
+For further information visit 
+https://errors.pydantic.dev/2.7/u/import-error

@@ -1,0 +1,21 @@
+﻿python : C:\Python\Python310\lib\site-packages\py
+dantic\_internal\_config.py:334: UserWarning: 
+Valid config keys have changed in V2:
+At line:1 char:62
++ ... y\scratch"; python -m uvicorn 
+backend.main:app --host 0.0.0.0 --port  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\ 
+   Python\Pytho... changed in V2::String) [], R  
+  emoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+* 'orm_mode' has been renamed to 
+'from_attributes'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [13668]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 
+(Press CTRL+C to quit)

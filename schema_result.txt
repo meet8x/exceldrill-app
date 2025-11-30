@@ -1,0 +1,2 @@
+User table columns: ['id', 'email', 'hashed_password', 'is_active', 'is_paid', 'plan_type', 'plan_expiry']
+SUCCESS: All required columns present.

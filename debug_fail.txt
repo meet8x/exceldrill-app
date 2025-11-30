@@ -1,0 +1,7 @@
+Import failed: No module named 'app'
+Traceback (most recent call last):
+  File "C:\Users\ASUS\.gemini\antigravity\scratch\debug_backend.py", line 10, in <module>
+    from backend.main import app
+  File "C:\Users\ASUS\.gemini\antigravity\scratch\backend\main.py", line 15, in <module>
+    from app.api.endpoints import router
+ModuleNotFoundError: No module named 'app'
