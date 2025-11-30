@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     
     # Email Settings (Titan Email)
     SMTP_HOST: str = "smtp.titan.email"
-    SMTP_PORT: int = 465
+    SMTP_PORT: int = 587
     SMTP_USER: str = "support@exceldrill.app"
     SMTP_PASSWORD: str = "Thaker@1122"
     EMAILS_FROM_EMAIL: str = "support@exceldrill.app"
