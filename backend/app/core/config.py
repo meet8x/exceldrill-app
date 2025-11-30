@@ -21,13 +21,13 @@ class Settings(BaseSettings):
     RAZORPAY_KEY_ID: str = os.getenv("RAZORPAY_KEY_ID", "rzp_live_Rm0j31foB7ikg9")
     RAZORPAY_KEY_SECRET: str = os.getenv("RAZORPAY_KEY_SECRET", "")
     
-    # Email Settings
-    SMTP_HOST: str = "smtp.gmail.com"
-    SMTP_PORT: int = 587
-    SMTP_USER: str = "meettheanalyst@gmail.com"
-    SMTP_PASSWORD: str = "ualr sjom xojb mncg"
-    EMAILS_FROM_EMAIL: str = "meettheanalyst@gmail.com"
-    EMAILS_FROM_NAME: str = "Exceldrill AI"
+    # Email Settings (Titan Email)
+    SMTP_HOST: str = "smtp.titan.email"
+    SMTP_PORT: int = 465
+    SMTP_USER: str = "support@exceldrill.app"
+    SMTP_PASSWORD: str = "Thaker@1122"
+    EMAILS_FROM_EMAIL: str = "support@exceldrill.app"
+    EMAILS_FROM_NAME: str = "ExcelDrill AI"
     
     # Google SSO
     GOOGLE_CLIENT_ID: str = "90600034364-o8r416gis9gqplo3ldt0a4tbpdonbm4q.apps.googleusercontent.com"
