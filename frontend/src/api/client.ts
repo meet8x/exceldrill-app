@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { AnalysisConfig, AnalysisResult } from './types';
 
-const API_URL = 'http://localhost:8000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 export const client = axios.create({
     baseURL: API_URL,
