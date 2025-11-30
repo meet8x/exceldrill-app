@@ -20,3 +20,4 @@ plotly
 email-validator
 kaleido
 requests
+psycopg2-binary
