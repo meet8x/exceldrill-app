@@ -11,7 +11,10 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     
     # Database
-    SQLALCHEMY_DATABASE_URI: str = "sqlite:///./sql_app.db"
+    # Database
+    SQLALCHEMY_DATABASE_URI: str = os.getenv("DATABASE_URL", "sqlite:///./sql_app.db")
+    if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://", 1)
     
     # Payment (Razorpay)
     # Get these from https://dashboard.razorpay.com/app/keys
