@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     
     # Payment (Razorpay)
     # Get these from https://dashboard.razorpay.com/app/keys
-    RAZORPAY_KEY_ID: str = os.getenv("RAZORPAY_KEY_ID", "rzp_test_1DP5mmOlF5G5ag")
+    RAZORPAY_KEY_ID: str = os.getenv("RAZORPAY_KEY_ID", "rzp_live_Rm0j31foB7ikg9")
     RAZORPAY_KEY_SECRET: str = os.getenv("RAZORPAY_KEY_SECRET", "")
     
     # Email Settings
