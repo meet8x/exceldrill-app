@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                             Gujarat, India
                         </p>
                         <p className="text-gray-300 text-sm mt-3">
-                            Email: support@exceldrill.ai
+                            Email: support@exceldrill.app
                         </p>
                     </div>
                 </div>

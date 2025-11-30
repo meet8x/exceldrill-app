@@ -45,7 +45,7 @@ const RefundPolicy: React.FC = () => {
                             To request a refund:
                         </p>
                         <ol>
-                            <li>Email us at support@exceldrill.ai with your order details</li>
+                            <li>Email us at support@exceldrill.app with your order details</li>
                             <li>Provide a reason for the refund request</li>
                             <li>Include your transaction ID and registered email</li>
                             <li>Our team will review your request within 3-5 business days</li>
@@ -58,7 +58,7 @@ const RefundPolicy: React.FC = () => {
 
                         <h3>6. Cancellation Policy</h3>
                         <p>
-                            For lifetime access plans, cancellation is not applicable as it's a one-time payment. However, you can request account deletion at any time by contacting support@exceldrill.ai.
+                            For lifetime access plans, cancellation is not applicable as it's a one-time payment. However, you can request account deletion at any time by contacting support@exceldrill.app.
                         </p>
 
                         <h3>7. Partial Refunds</h3>
@@ -71,7 +71,7 @@ const RefundPolicy: React.FC = () => {
                             For any refund or cancellation queries, please contact us at:
                         </p>
                         <p>
-                            Email: support@exceldrill.ai<br />
+                            Email: support@exceldrill.app<br />
                             Response Time: Within 24-48 hours
                         </p>
                     </div>

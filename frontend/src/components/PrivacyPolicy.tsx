@@ -47,7 +47,7 @@ const PrivacyPolicy: React.FC = () => {
 
                     <h3>5. Contact Us</h3>
                     <p>
-                        If you have any questions about this Privacy Policy, please contact us at support@datainsight.ai.
+                        If you have any questions about this Privacy Policy, please contact us at support@exceldrill.app.
                     </p>
                 </div>
             </div>

@@ -46,7 +46,7 @@ const TermsOfService: React.FC = () => {
 
                     <h3>6. Contact Us</h3>
                     <p>
-                        For any questions regarding these terms, please contact us at support@datainsight.ai.
+                        For any questions regarding these terms, please contact us at support@exceldrill.app.
                     </p>
                 </div>
             </div>
