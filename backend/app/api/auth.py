@@ -2,7 +2,7 @@ import random
 import string
 from datetime import timedelta
 from typing import Any
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, BackgroundTasks
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, EmailStr
@@ -44,6 +44,7 @@ def generate_otp(length=6):
 @router.post("/register", response_model=UserResponse)
 def register(
     user_in: UserCreate,
+    background_tasks: BackgroundTasks,
     db: Session = Depends(deps.get_db),
 ) -> Any:
     user = db.query(User).filter(User.email == user_in.email).first()
@@ -66,22 +67,19 @@ def register(
     db.commit()
     db.refresh(user)
     
-    # Send OTP Email
-    try:
-        email_service = EmailService()
-        subject = "Verify your email - Exceldrill AI"
-        html_content = f"""
-        <html>
-            <body>
-                <h2>Verify your email</h2>
-                <p>Your verification code is: <strong>{otp}</strong></p>
-                <p>Please enter this code to complete your registration.</p>
-            </body>
-        </html>
-        """
-        email_service.send_email(user.email, subject, html_content)
-    except Exception as e:
-        print(f"Failed to send OTP email: {e}")
+    # Send OTP Email in Background
+    email_service = EmailService()
+    subject = "Verify your email - Exceldrill AI"
+    html_content = f"""
+    <html>
+        <body>
+            <h2>Verify your email</h2>
+            <p>Your verification code is: <strong>{otp}</strong></p>
+            <p>Please enter this code to complete your registration.</p>
+        </body>
+    </html>
+    """
+    background_tasks.add_task(email_service.send_email, user.email, subject, html_content)
         
     return user
 
