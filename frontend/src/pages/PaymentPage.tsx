@@ -66,7 +66,7 @@ export const PaymentPage: React.FC = () => {
                         });
                         alert("Payment Successful! You are now a Premium user.");
                         await refreshUser();
-                        navigate('/');
+                        navigate('/dashboard');
                     } catch (error) {
                         alert("Payment verification failed.");
                     }
