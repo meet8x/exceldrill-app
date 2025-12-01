@@ -55,6 +55,7 @@ def register(
         )
     
     otp = generate_otp()
+    print(f"🔐 GENERATED OTP FOR {user_in.email}: {otp}")
     
     user = User(
         email=user_in.email,
